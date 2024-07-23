@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Quotes</title>
+</head>
+<body>
+    <h1>Quotes</h1>
+    <ul>
+        {% for key, quote in quotes.items() %}
+            <li><strong>{{ quote['text'] }}</strong> - {{ quote['said_by'] }}</li>
+        {% else %}
+            <li>No quotes available</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Add Another Quote</a>
+    <a href="{{ url_for('signout') }}">Sign Out</a>
+</body>
+</html>

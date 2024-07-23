@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Submit a Quote</h1>
+    <form method="POST" action="{{ url_for('home') }}">
+        <label for="quote">Quote:</label>
+        <input type="text" id="quote" name="quote" required>
+        <br>
+        <label for="said_by">Said By:</label>
+        <input type="text" id="said_by" name="said_by" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{{ url_for('display') }}">View Quotes</a>
+    <a href="{{ url_for('signout') }}">Sign Out</a>
+</body>
+</html>
